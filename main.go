@@ -35,9 +35,11 @@ func commands() {
 
 func main() {
 	info()
+	commands()
 
 	err := app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)
 	}
+
 }
