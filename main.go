@@ -24,13 +24,17 @@ func commands() {
 			Aliases: []string{"oc"},
 			Usage:   "To count words count",
 			Action: func() {
-				reader := bufio.NewReader(os.Stdin)
-				fmt.Print("Enter text : ")
-				text, _ := reader.ReadString('\n')
-				fmt.Println(text)
+				fmt.Println("Hello octo")
 			},
 		},
 	}
+}
+
+func readText()  {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter text : ")
+	text, _ := reader.ReadString('\n')
+	fmt.Println(text)
 }
 
 func main() {
@@ -42,4 +46,5 @@ func main() {
 		log.Fatal(err)
 	}
 
+	readText()
 }
